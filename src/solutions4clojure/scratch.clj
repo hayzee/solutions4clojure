@@ -647,3 +647,53 @@
   )
 
 
+;; 132
+
+(fn ib2 [p v s]
+  (if (empty? (rest s))
+    s
+    (let [rv (map #(if (apply p %) (vector (first %) v (second %)) (vector (first %) (second %))) (partition 2 1 s))]
+      (flatten (cons (first rv)(map rest (rest rv)))))))
+
+(defn __ [p, k, sq]
+  (when (seq sq)
+    (cons (first sq)
+      (->>
+        (partition 2 1 sq)
+        (map (fn [[f s :as a]] (if (p f s) [f k s] a)))
+        (map (partial drop 1))
+        flatten))))
+
+(= '(1 :less 6 :less 7 4 3) (__ < :less [1 6 7 4 3]))
+
+(= '(2) (__ > :more [2]))
+
+(empty? (__ > :more ()))
+
+(= [0 1 :same 1 2 3 :same 5 8 13 :same 21]
+  (take 12 (->> [0 1]
+             (iterate (fn [[a b]] [b (+ a b)]))
+             (map first) ; fibonacci numbers
+             (__ (fn [a b] ; both even or both odd
+                   (= (mod a 2) (mod b 2)))
+               :same))))
+
+(defn __ [p k s]
+  (let [r (map (fn [[x y]] (if (p x y) [x k y] [x y])) (partition 2 1 s))]
+    (if (seq r)
+      (flatten (cons (first r) (map rest (rest r))))
+      s)))
+
+(= '(1 :less 6 :less 7 4 3) (__ < :less [1 6 7 4 3]))
+
+(= '(2) (__ > :more [2]))
+
+(empty? (__ > :more ()))
+
+(= [0 1 :same 1 2 3 :same 5 8 13 :same 21]
+  (take 12 (->> [0 1]
+             (iterate (fn [[a b]] [b (+ a b)]))
+             (map first) ; fibonacci numbers
+             (__ (fn [a b] ; both even or both odd
+                   (= (mod a 2) (mod b 2)))
+               :same))))
