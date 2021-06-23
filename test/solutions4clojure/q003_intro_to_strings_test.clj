@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q003-intro-to-strings :refer :all]))
 
 (deftest answer-test
-  (is (= answer (.toUpperCase "hello world"))))
+  (is (= __ (.toUpperCase "hello world"))))

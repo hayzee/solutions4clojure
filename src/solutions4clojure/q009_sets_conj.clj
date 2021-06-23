@@ -1,3 +1,3 @@
 (ns solutions4clojure.q009-sets-conj)
 
-(def answer 2)
+(def __ 2)

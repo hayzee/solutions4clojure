@@ -3,6 +3,6 @@
   (:require [solutions4clojure.q034-implement-range :refer :all]))
 
 (deftest answer-test
-  (is (= (answer 1 4) '(1 2 3)))
-  (is (= (answer -2 2) '(-2 -1 0 1)))
-  (is (= (answer 5 8) '(5 6 7))))
+  (is (= (__ 1 4) '(1 2 3)))
+  (is (= (__ -2 2) '(-2 -1 0 1)))
+  (is (= (__ 5 8) '(5 6 7))))

@@ -1,3 +1,4 @@
-(ns solutions4clojure.q006-intro-to-vectors)
+(ns solutions4clojure.q006-intro-to-vectors
+  (:require [solutions4clojure.answers :refer :all]))
 
-(def answer [:a :b :c])
+(defanswer __ :a :b :c)

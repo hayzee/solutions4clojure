@@ -3,9 +3,9 @@
   (:require [solutions4clojure.q015-double-down :refer :all]))
 
 (deftest answer-test
-  (is (= (answer 2) 4))
-  (is (= (answer 3) 6))
-  (is (= (answer 11) 22))
-  (is (= (answer 7) 14)))
+  (is (= (__ 2) 4))
+  (is (= (__ 3) 6))
+  (is (= (__ 11) 22))
+  (is (= (__ 7) 14)))
 
 

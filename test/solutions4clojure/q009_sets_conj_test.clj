@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q009-sets-conj :refer :all]))
 
 (deftest answer-test
-  (is (= #{1 2 3 4} (conj #{1 4 3} answer))))
+  (is (= #{1 2 3 4} (conj #{1 4 3} __))))

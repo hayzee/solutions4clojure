@@ -5,16 +5,16 @@
 (deftest answer-test
 
   (is (= '(n)
-    (answer 'n '(n))))
+    (__ 'n '(n))))
 
   (is (= '(a (t (e)))
-    (answer 'a '(t (e) (a)))))
+    (__ 'a '(t (e) (a)))))
 
   (is (= '(e (t (a)))
-    (answer 'e '(a (t (e))))))
+    (__ 'e '(a (t (e))))))
 
   (is (= '(a (b (c)))
-    (answer 'a '(c (b (a))))))
+    (__ 'a '(c (b (a))))))
 
   (is (= '(d
         (b
@@ -24,7 +24,7 @@
             (f
               (g)
               (h)))))
-    (answer 'd '(a
+    (__ 'd '(a
                   (b
                     (c)
                     (d)
@@ -48,7 +48,7 @@
               (m
                 (n)
                 (o))))))
-    (answer 'c '(a
+    (__ 'c '(a
                   (b
                     (c
                       (d)

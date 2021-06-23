@@ -3,5 +3,5 @@
   (:require [solutions4clojure.q005-lists-conj :refer :all]))
 
 (deftest answer-test
-  (is (= answer (conj '(2 3 4) 1)))
-  (is (= answer (conj '(3 4) 2 1))))
+  (is (= __ (conj '(2 3 4) 1)))
+  (is (= __ (conj '(3 4) 2 1))))

@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q013-sequences-rest :refer :all]))
 
 (deftest check_answer
-  (is (= answer (rest [10 20 30 40]))))
+  (is (= __ (rest [10 20 30 40]))))

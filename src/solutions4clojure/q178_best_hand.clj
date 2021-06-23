@@ -1,6 +1,6 @@
 (ns solutions4clojure.q178-best-hand)
 
-(def answer
+(def __
   (fn best-hand [cards]
     (let [str-to-card (fn [s ah]
                         {:suit ({\D :diamond \H :heart \C :club \S :spade} (.charAt s 0))

@@ -3,6 +3,6 @@
   (:require [solutions4clojure.q016-hello-world :refer :all]))
 
 (deftest answer-test
-  (is (= (answer "Dave") "Hello, Dave!"))
-  (is (= (answer "Jenn") "Hello, Jenn!"))
-  (is (= (answer "Rhea") "Hello, Rhea!")))
+  (is (= (__ "Dave") "Hello, Dave!"))
+  (is (= (__ "Jenn") "Hello, Jenn!"))
+  (is (= (__ "Rhea") "Hello, Rhea!")))

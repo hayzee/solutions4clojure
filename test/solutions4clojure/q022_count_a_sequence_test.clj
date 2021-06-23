@@ -3,8 +3,8 @@
   (:require [solutions4clojure.q022-count-a-sequence :refer :all]))
 
 (deftest answer-test
-  (is (= (answer '(1 2 3 3 1)) 5))
-  (is (= (answer "Hello World") 11))
-  (is (= (answer [[1 2] [3 4] [5 6]]) 3))
-  (is (= (answer '(13)) 1))
-  (is (= (answer '(:a :b :c)) 3)))
+  (is (= (__ '(1 2 3 3 1)) 5))
+  (is (= (__ "Hello World") 11))
+  (is (= (__ [[1 2] [3 4] [5 6]]) 3))
+  (is (= (__ '(13)) 1))
+  (is (= (__ '(:a :b :c)) 3)))

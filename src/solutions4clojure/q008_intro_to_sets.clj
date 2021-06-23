@@ -1,4 +1,4 @@
 (ns solutions4clojure.q008-intro-to-sets)
 
-(def answer #{:a :b :c :d})
+(def __ #{:a :b :c :d})
 

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q113-making-data-dance)
 
-(def answer
+(def __
   (fn [& args]
     (reify clojure.lang.Seqable
       (toString [this] (apply str (interpose ", " (sort args))))

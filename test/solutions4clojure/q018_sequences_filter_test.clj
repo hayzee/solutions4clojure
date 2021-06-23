@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q018-sequences-filter :refer :all]))
 
 (deftest answer-test
-  (is (= answer (filter #(> % 5) '(3 4 5 6 7)))))
+  (is (= __ (filter #(> % 5) '(3 4 5 6 7)))))

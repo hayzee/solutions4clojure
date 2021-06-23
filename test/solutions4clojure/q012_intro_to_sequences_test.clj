@@ -3,6 +3,6 @@
   (:require [solutions4clojure.q012-intro-to-sequences :refer :all]))
 
 (deftest answer-test
-  (is (= answer (first '(3 2 1))))
-  (is (= answer (second [2 3 4])))
-  (is (= answer (last (list 1 2 3)))))
+  (is (= __ (first '(3 2 1))))
+  (is (= __ (second [2 3 4])))
+  (is (= __ (last (list 1 2 3)))))

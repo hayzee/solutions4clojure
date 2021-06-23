@@ -1,3 +1,4 @@
-(ns solutions4clojure.q004-intro-to-lists)
+(ns solutions4clojure.q004-intro-to-lists
+  (:require [solutions4clojure.answers :refer :all]))
 
-(def answer (list :a :b :c))
+(defanswer __ :a :b :c)

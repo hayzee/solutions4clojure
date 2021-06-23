@@ -1,3 +1,3 @@
 (ns solutions4clojure.q005-lists-conj)
 
-(def answer (list 1 2 3 4))
+(def __ (list 1 2 3 4))

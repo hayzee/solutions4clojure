@@ -1,3 +1,3 @@
 (ns solutions4clojure.q014-intro-to-functions)
 
-(def answer 8)
+(def __ 8)

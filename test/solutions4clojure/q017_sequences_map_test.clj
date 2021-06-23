@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q017-sequences-map :refer :all]))
 
 (deftest answer-test
-  (is (= answer (map #(+ % 5) '(1 2 3)))))
+  (is (= __ (map #(+ % 5) '(1 2 3)))))

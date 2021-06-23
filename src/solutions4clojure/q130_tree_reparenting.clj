@@ -1,6 +1,6 @@
 (ns solutions4clojure.q130-tree-reparenting)
 
-(def answer
+(def __
   #(let [detach (fn [tree node]
                   (let [path (atom [])
                         found (atom [nil []])

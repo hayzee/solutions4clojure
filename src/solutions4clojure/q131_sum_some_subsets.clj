@@ -1,6 +1,6 @@
 (ns solutions4clojure.q131-sum-some-subsets)
 
-(def answer
+(def __
   (fn [& sets]
     (let
       [subseqs (fn subseqs [s]

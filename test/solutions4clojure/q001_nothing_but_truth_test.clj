@@ -3,4 +3,4 @@
   (:require [solutions4clojure.q001-nothing-but-truth :refer :all]))
 
 (deftest answer-test
-  (is (= answer true)))
+  (is (= __ true)))

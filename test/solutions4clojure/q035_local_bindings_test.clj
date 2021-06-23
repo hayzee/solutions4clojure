@@ -3,6 +3,6 @@
   (:require [solutions4clojure.q035-local-bindings :refer :all]))
 
 (deftest answer-test
-  (is (= answer (let [x 5] (+ 2 x))))
-  (is (= answer (let [x 3, y 10] (- y x))))
-  (is (= answer (let [x 21] (let [y 3] (/ x y))))))
+  (is (= __ (let [x 5] (+ 2 x))))
+  (is (= __ (let [x 3, y 10] (- y x))))
+  (is (= __ (let [x 21] (let [y 3] (/ x y))))))

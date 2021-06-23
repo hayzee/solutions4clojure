@@ -3,6 +3,6 @@
   (:require [solutions4clojure.q029-get-the-caps :refer :all]))
 
 (deftest answer-test
-  (is (= (answer "HeLlO, WoRlD!") "HLOWRD"))
-  (is (empty? (answer "nothing")))
-  (is (= (answer "$#A(*&987Zf") "AZ")))
+  (is (= (__ "HeLlO, WoRlD!") "HLOWRD"))
+  (is (empty? (__ "nothing")))
+  (is (= (__ "$#A(*&987Zf") "AZ")))
