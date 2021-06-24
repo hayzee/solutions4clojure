@@ -40,7 +40,6 @@
 
 (comment
 
-
   (defn terminal?
     ;; This state has no further possible moves
     [s]
