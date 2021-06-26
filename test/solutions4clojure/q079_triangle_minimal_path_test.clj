@@ -1,6 +1,6 @@
 (ns solutions4clojure.q079-triangle-minimal-path-test
   (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q079-triangle-minimal-path :refer [__]]))
+  (:require [solutions4clojure.q079-triangle-minimal-path :refer :all]))
 
 (deftest answer-test
   (is (= 7 (__ '([1]

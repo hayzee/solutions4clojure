@@ -1,6 +1,6 @@
 (ns solutions4clojure.q111-crossword-puzzle-test
   (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q111-crossword-puzzle :refer [__]]))
+  (:require [solutions4clojure.q111-crossword-puzzle :refer :all]))
 
 (deftest answer-test
   (is (= true  (__ "the" ["_ # _ _ e"])))
