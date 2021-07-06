@@ -9,7 +9,7 @@
                      (if (some #{c} #{\) \] \}})
                        (if (= ({\) \( \} \{ \] \[} c) (peek v))
                          (vec (butlast v))
-                         ;                         (reduced [:error])  ;; not allowed on 4clojure - older version of compiler
+                         ;(reduced [:error])  ;; not allowed on 4clojure - older version of compiler
                          (conj v :error)
                          )
                        v)))
