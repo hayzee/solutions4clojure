@@ -2,4 +2,7 @@
 
 (def __
   (fn [s]
-    (sort-by clojure.string/lower-case (map #(apply str (filter (fn [c] (Character/isLetter ^char c)) %)) (clojure.string/split s #" ")))))
+    (sort-by clojure.string/lower-case
+      (clojure.string/split
+        (apply str (remove #{\! \, \.} s))
+        #" " ))))
