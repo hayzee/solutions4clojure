@@ -10,31 +10,21 @@
                        (if (= ({\) \( \} \{ \] \[} c) (peek v))
                          (vec (butlast v))
                          ;(reduced [:error])  ;; not allowed on 4clojure - older version of compiler
-                         (conj v :error)
+                         (conj v :x)
                          )
                        v)))
                  [] s)))))
 
-;; previous answer
+
+; Also works but not efficient
 ;(def __
-;  (fn balanced? [s]
-;    (let [ remove-pairs (fn remove-pairs [s]
-;                          (if (empty? s)
-;                            s
-;                            (if (contains? #{ [\{ \}] [\[\]] [\(\)] } (take 2 s))
-;                              (remove-pairs (rest (rest s)))
-;                              (cons (first s) (remove-pairs (rest s))))))
-;          split-at-repeat (fn [s]
-;                            (->>
-;                              (partition-all 2 1 s)
-;                              (split-with #(apply not= %) )
-;                              (map #(map first %))))]
-;      (->>
-;        (filter #(contains? #{ \[ \] \{ \} \( \) } %) s)
-;        (iterate #(apply str (remove-pairs %)))
-;        (split-at-repeat)
-;        (second)
-;        (first)
-;        (empty?)))))
+;  (fn [pseq]
+;    (->>
+;      (apply str (filter #{\{ \} \( \) \[ \]} pseq))
+;      (iterate #(clojure.string/replace % #"\{\}|\(\)|\[\]" ""))
+;      (partition 2)
+;      (drop-while (fn [[f s]] (not= f s)))
+;      ffirst
+;      (= ""))))
 
 
