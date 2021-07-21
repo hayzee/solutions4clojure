@@ -1,6 +1,6 @@
 (ns solutions4clojure.q102-into-camel-case-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q102-into-camel-case :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q102-into-camel-case :refer :all]))
 
 (deftest answer-test
   (is (= (__ "something") "something"))

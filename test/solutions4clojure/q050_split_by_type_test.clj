@@ -1,6 +1,6 @@
 (ns solutions4clojure.q050-split-by-type-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q050-split-by-type :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q050-split-by-type :refer :all]))
 
 (deftest answer-test
   (is (= (set (__ [1 :a 2 :b 3 :c])) #{[1 2 3] [:a :b :c]}))

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q144-oscilrate-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q144-oscilrate :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q144-oscilrate :refer :all]))
 
 (deftest answer-test
   (is (= (take 3 (__ 3.14 int double)) [3.14 3 3.0]))

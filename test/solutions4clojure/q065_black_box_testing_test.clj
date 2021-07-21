@@ -1,6 +1,6 @@
 (ns solutions4clojure.q065-black-box-testing-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q065-black-box-testing :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q065-black-box-testing :refer :all]))
 
 (deftest answer-test
   (is (= :map (__ {:a 1, :b 2})))

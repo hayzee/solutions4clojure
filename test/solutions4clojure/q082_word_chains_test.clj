@@ -1,6 +1,6 @@
 (ns solutions4clojure.q082-word-chains-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q082-word-chains :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q082-word-chains :refer :all]))
 
 (deftest answer-test
   (is (= true (__ #{"hat" "coat" "dog" "cat" "oat" "cot" "hot" "hog"})))

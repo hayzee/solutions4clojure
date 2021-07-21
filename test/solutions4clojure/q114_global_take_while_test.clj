@@ -1,6 +1,6 @@
 (ns solutions4clojure.q114-global-take-while-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q114-global-take-while :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q114-global-take-while :refer :all]))
 
 (deftest answer-test
   (is (= [2 3 5 7 11 13]

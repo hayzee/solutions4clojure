@@ -1,6 +1,6 @@
 (ns solutions4clojure.q106-number-maze-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q106-number-maze :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q106-number-maze :refer :all]))
 
 (deftest answer-test
   (is (= 1 (__ 1 1)))

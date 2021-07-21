@@ -1,6 +1,6 @@
 (ns solutions4clojure.q012-intro-to-sequences-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q012-intro-to-sequences :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q012-intro-to-sequences :refer :all]))
 
 (deftest answer-test
   (is (= __ (first '(3 2 1))))

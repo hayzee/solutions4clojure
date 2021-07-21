@@ -1,6 +1,6 @@
 (ns solutions4clojure.q104-write-roman-numerals-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q104-write-roman-numerals :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q104-write-roman-numerals :refer :all]))
 
 (deftest answer-test
   (is (= "I" (__ 1)))

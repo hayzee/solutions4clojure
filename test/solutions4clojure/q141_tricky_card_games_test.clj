@@ -1,6 +1,6 @@
 (ns solutions4clojure.q141-tricky-card-games-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q141-tricky-card-games :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q141-tricky-card-games :refer :all]))
 
 (deftest answer-test
   (is (let [notrump (__ nil)]

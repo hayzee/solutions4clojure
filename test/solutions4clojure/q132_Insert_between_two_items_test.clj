@@ -1,6 +1,6 @@
 (ns solutions4clojure.q132-Insert-between-two-items-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q132-Insert-between-two-items :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q132-Insert-between-two-items :refer :all]))
 
 (deftest answer-test
   (is (= '(1 :less 6 :less 7 4 3) (__ < :less [1 6 7 4 3])))

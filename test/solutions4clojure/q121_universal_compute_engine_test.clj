@@ -1,6 +1,6 @@
 (ns solutions4clojure.q121-universal-compute-engine-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q121-universal-compute-engine :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q121-universal-compute-engine :refer :all]))
 
 (deftest answer-test
   (is (= 2 ((__ '(/ a b))

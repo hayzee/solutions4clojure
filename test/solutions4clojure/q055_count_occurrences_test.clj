@@ -1,6 +1,6 @@
 (ns solutions4clojure.q055-count-occurrences-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q055-count-occurrences :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q055-count-occurrences :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 1 2 3 2 1 1]) {1 4, 2 2, 3 1}))

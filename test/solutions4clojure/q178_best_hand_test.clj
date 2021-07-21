@@ -1,6 +1,6 @@
 (ns solutions4clojure.q178-best-hand-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q178-best-hand :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q178-best-hand :refer :all]))
 
 (deftest answer-test
   (is (= :high-card (__ ["HA" "D2" "H3" "C9" "DJ"])))

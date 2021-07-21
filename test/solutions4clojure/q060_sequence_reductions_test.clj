@@ -1,6 +1,6 @@
 (ns solutions4clojure.q060-sequence-reductions-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q060-sequence-reductions :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q060-sequence-reductions :refer :all]))
 
 (deftest answer-test
   (is (= (take 5 (__ + (range))) [0 1 3 6 10]))

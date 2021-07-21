@@ -1,6 +1,6 @@
 (ns solutions4clojure.q022-count-a-sequence-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q022-count-a-sequence :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q022-count-a-sequence :refer :all]))
 
 (deftest answer-test
   (is (= (__ '(1 2 3 3 1)) 5))

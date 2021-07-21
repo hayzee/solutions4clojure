@@ -1,6 +1,6 @@
 (ns solutions4clojure.q056-find-distinct-items-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q056-find-distinct-items :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q056-find-distinct-items :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 1 3 1 2 4]) [1 2 3 4]))

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q025-find-the-odd-numbers-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q025-find-the-odd-numbers :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q025-find-the-odd-numbers :refer :all]))
 
 (deftest answer-test
   (is (= (__ #{1 2 3 4 5}) '(1 3 5)))

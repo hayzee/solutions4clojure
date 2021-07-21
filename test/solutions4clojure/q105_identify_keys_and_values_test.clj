@@ -1,6 +1,6 @@
 (ns solutions4clojure.q105-identify-keys-and-values-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q105-identify-keys-and-values :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q105-identify-keys-and-values :refer :all]))
 
 (deftest answer-test
   (is (= {} (__ [])))

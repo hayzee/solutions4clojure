@@ -1,6 +1,6 @@
 (ns solutions4clojure.q034-implement-range-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q034-implement-range :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q034-implement-range :refer :all]))
 
 (deftest answer-test
   (is (= (__ 1 4) '(1 2 3)))

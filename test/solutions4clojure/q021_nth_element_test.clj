@@ -1,6 +1,6 @@
 (ns solutions4clojure.q021-nth-element-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q021-nth-element :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q021-nth-element :refer :all]))
 
 (deftest answer-test
   (is (= (__ '(4 5 6 7) 2) 6))

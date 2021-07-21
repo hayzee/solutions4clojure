@@ -1,6 +1,6 @@
 (ns solutions4clojure.q130-tree-reparenting-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q130-tree-reparenting :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q130-tree-reparenting :refer :all]))
 
 (deftest answer-test
 

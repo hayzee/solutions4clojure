@@ -1,6 +1,6 @@
 (ns solutions4clojure.q080-perfect-numbers-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q080-perfect-numbers :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q080-perfect-numbers :refer :all]))
 
 (deftest answer-test
   (is (= (__ 6) true))

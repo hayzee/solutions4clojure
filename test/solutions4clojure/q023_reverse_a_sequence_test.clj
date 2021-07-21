@@ -1,6 +1,6 @@
 (ns solutions4clojure.q023-reverse-a-sequence-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q023-reverse-a-sequence :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q023-reverse-a-sequence :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 3 4 5]) [5 4 3 2 1]))

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q054-partition-a-sequence-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q054-partition-a-sequence :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q054-partition-a-sequence :refer :all]))
 
 (deftest answer-test
   (is (= (__ 3 (range 9)) '((0 1 2) (3 4 5) (6 7 8))))

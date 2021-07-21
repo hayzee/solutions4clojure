@@ -1,6 +1,6 @@
 (ns solutions4clojure.q158-decurry-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q158-decurry :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q158-decurry :refer :all]))
 
 (deftest answer-test
   (is (= 10 ((__ (fn [a]

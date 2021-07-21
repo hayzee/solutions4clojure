@@ -1,6 +1,6 @@
 (ns solutions4clojure.q059-juxtaposition-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q059-juxtaposition :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q059-juxtaposition :refer :all]))
 
 (deftest answer-test
   (is (= [21 6 1] ((__ + max min) 2 3 5 1 6 4)))

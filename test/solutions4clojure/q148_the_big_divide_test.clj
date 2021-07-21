@@ -1,6 +1,6 @@
 (ns solutions4clojure.q148-the-big-divide-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q148-the-big-divide :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q148-the-big-divide :refer :all]))
 
 (deftest answer-test
   (is (= 0 (__ 3 17 11)))

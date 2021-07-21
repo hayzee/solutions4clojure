@@ -1,6 +1,6 @@
 (ns solutions4clojure.q078-reimplement-trampoline-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q078-reimplement-trampoline :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q078-reimplement-trampoline :refer :all]))
 
 (deftest answer-test
   (is (= (letfn [(triple [x] #(sub-two (* 3 x)))

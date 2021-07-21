@@ -1,6 +1,6 @@
 (ns solutions4clojure.q073-analyze-tic-tac-toe-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q073-analyze-tic-tac-toe :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q073-analyze-tic-tac-toe :refer :all]))
 
 (deftest answer-test
   (is (= nil (__ [[:e :e :e]

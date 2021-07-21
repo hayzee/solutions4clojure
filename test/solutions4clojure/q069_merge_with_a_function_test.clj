@@ -1,6 +1,6 @@
 (ns solutions4clojure.q069-merge-with-a-function-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q069-merge-with-a-function :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q069-merge-with-a-function :refer :all]))
 
 (deftest answer-test
   (is (= (__ * {:a 2, :b 3, :c 4} {:a 2} {:b 2} {:c 5})

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q093-partially-flatten-seq-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q093-partially-flatten-seq :refer [__]]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q093-partially-flatten-seq :refer [__]]))
 
 (deftest answer-test
   (is (= (__ [["Do"] ["Nothing"]])

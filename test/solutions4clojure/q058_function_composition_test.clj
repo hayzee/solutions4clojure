@@ -1,6 +1,6 @@
 (ns solutions4clojure.q058-function-composition-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q058-function-composition :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q058-function-composition :refer :all]))
 
 (deftest answer-test
   (is (= [3 2 1] ((__ rest reverse) [1 2 3 4])))

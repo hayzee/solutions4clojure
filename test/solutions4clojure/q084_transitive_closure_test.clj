@@ -1,6 +1,6 @@
 (ns solutions4clojure.q084-transitive-closure-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q084-transitive-closure :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q084-transitive-closure :refer :all]))
 
 (deftest answer-test
   (is (let [divides #{[8 4] [9 3] [4 2] [27 9]}]

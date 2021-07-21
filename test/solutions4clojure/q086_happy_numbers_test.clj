@@ -1,6 +1,6 @@
 (ns solutions4clojure.q086-happy-numbers-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q086-happy-numbers :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q086-happy-numbers :refer :all]))
 
 (deftest answer-test
   (is (= (__ 7) true))

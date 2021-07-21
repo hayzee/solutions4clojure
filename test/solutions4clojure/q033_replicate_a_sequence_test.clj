@@ -1,6 +1,6 @@
 (ns solutions4clojure.q033-replicate-a-sequence-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q033-replicate-a-sequence :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q033-replicate-a-sequence :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 3] 2) '(1 1 2 2 3 3)))

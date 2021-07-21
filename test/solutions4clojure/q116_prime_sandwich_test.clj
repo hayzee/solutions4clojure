@@ -1,6 +1,6 @@
 (ns solutions4clojure.q116-prime-sandwich-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q116-prime-sandwich :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q116-prime-sandwich :refer :all]))
 
 (deftest answer-test
   (is (= false (__ 4)))

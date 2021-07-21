@@ -1,6 +1,6 @@
 (ns solutions4clojure.q168-infinite-matrix-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q168-infinite-matrix :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q168-infinite-matrix :refer :all]))
 
 (deftest answer-test
   (is (= (take 5 (map #(take 6 %) (__ str)))

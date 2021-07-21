@@ -1,6 +1,6 @@
 (ns solutions4clojure.q108-lazy-searching-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q108-lazy-searching :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q108-lazy-searching :refer :all]))
 
 (deftest answer-test
   (is (= 3 (__ [3 4 5])))

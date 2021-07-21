@@ -1,6 +1,6 @@
 (ns solutions4clojure.q015-double-down-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q015-double-down :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q015-double-down :refer :all]))
 
 (deftest answer-test
   (is (= (__ 2) 4))

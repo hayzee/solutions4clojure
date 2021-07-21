@@ -1,6 +1,6 @@
 (ns solutions4clojure.q070-word-sorting-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q070-word-sorting :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q070-word-sorting :refer :all]))
 
 (deftest answer-test
   (is (= (__  "Have a nice day.")

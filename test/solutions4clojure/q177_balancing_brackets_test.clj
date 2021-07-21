@@ -1,6 +1,6 @@
 (ns solutions4clojure.q177-balancing-brackets-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q177-balancing-brackets :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q177-balancing-brackets :refer :all]))
 
 (deftest answer-test
   (is (__ "This string has no brackets."))

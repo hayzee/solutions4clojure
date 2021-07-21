@@ -1,6 +1,6 @@
 (ns solutions4clojure.q024-sum-it-all-up-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q024-sum-it-all-up :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q024-sum-it-all-up :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 3]) 6))

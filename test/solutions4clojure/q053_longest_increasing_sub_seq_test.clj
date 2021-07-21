@@ -1,6 +1,6 @@
 (ns solutions4clojure.q053-longest-increasing-sub-seq-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q053-longest-increasing-sub-seq :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q053-longest-increasing-sub-seq :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 0 1 2 3 0 4 5]) [0 1 2 3]))

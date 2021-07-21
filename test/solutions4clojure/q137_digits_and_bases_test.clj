@@ -1,6 +1,6 @@
 (ns solutions4clojure.q137-digits-and-bases-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q137-digits-and-bases :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q137-digits-and-bases :refer :all]))
 
 (deftest answer-test
   (is (= [1 2 3 4 5 0 1] (__ 1234501 10)))

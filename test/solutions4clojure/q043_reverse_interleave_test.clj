@@ -1,6 +1,6 @@
 (ns solutions4clojure.q043-reverse-interleave-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q043-reverse-interleave :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q043-reverse-interleave :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 3 4 5 6] 2) '((1 3 5) (2 4 6))))

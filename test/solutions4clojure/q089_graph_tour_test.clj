@@ -1,6 +1,6 @@
 (ns solutions4clojure.q089-graph-tour-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q089-graph-tour :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q089-graph-tour :refer :all]))
 
 (deftest answer-test
   (is (= true (__ [[:a :b]])))

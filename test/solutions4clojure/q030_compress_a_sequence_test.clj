@@ -1,6 +1,6 @@
 (ns solutions4clojure.q030-compress-a-sequence-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q030-compress-a-sequence :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q030-compress-a-sequence :refer :all]))
 
 (deftest answer-test
   (is (= (apply str (__ "Leeeeeerrroyyy")) "Leroy"))

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q150-palindromic-numbers-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q150-palindromic-numbers :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q150-palindromic-numbers :refer :all]))
 
 (deftest answer-test
   (is (= (take 26 (__ 0))

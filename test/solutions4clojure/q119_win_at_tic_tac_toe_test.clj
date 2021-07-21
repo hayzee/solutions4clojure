@@ -1,6 +1,6 @@
 (ns solutions4clojure.q119-win-at-tic-tac-toe-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q119-win-at-tic-tac-toe :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q119-win-at-tic-tac-toe :refer :all]))
 
 (deftest answer-test
   (is (= (__ :x [[:o :e :e]

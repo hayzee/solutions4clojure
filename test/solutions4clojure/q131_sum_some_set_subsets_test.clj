@@ -1,6 +1,6 @@
 (ns solutions4clojure.q131-sum-some-set-subsets-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q131-sum-some-set-subsets :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q131-sum-some-set-subsets :refer :all]))
 
 (deftest answer-test
   (is (= true  (__ #{-1 1 99}

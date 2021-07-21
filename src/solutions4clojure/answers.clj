@@ -1,7 +1,10 @@
 (ns solutions4clojure.answers)
 
+;(defmacro defanswer [sy & form]
+;  `(intern *ns* '~sy '~form))
+
 (defmacro defanswer [sy & form]
-  (intern *ns* sy form))
+  `(def ~sy (quote ~form)))
 
 (defmacro is [answer form]
   (let [answer-str

@@ -1,6 +1,6 @@
 (ns solutions4clojure.q110-sequence-of-pronunciations-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q110-sequence-of-pronunciations :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q110-sequence-of-pronunciations :refer :all]))
 
 (deftest answer-test
   (is (= [[1 1] [2 1] [1 2 1 1]] (take 3 (__ [1]))))

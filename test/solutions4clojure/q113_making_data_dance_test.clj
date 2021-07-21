@@ -1,6 +1,6 @@
 (ns solutions4clojure.q113-making-data-dance-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q113-making-data-dance :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q113-making-data-dance :refer :all]))
 
 (deftest answer-test
   (is (= "1, 2, 3" (str (__ 2 1 3))))

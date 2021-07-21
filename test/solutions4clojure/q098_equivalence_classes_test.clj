@@ -1,6 +1,6 @@
 (ns solutions4clojure.q098-equivalence-classes-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q098-equivalence-classes :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q098-equivalence-classes :refer :all]))
 
 (deftest answer-test
   (is (= (__ #(* % %) #{-2 -1 0 1 2})

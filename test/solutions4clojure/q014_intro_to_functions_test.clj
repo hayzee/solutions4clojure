@@ -1,6 +1,6 @@
 (ns solutions4clojure.q014-intro-to-functions-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q014-intro-to-functions :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q014-intro-to-functions :refer :all]))
 
 (deftest answer-test
   (is (= __ ((fn add-five [x] (+ x 5)) 3)))

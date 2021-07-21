@@ -1,6 +1,6 @@
 (ns solutions4clojure.q101-levenshtein-distance-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q101-levenshtein-distance :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q101-levenshtein-distance :refer :all]))
 
 (deftest answer-test
   (is (= (__ "kitten" "sitting") 3))
