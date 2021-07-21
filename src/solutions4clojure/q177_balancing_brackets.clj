@@ -2,21 +2,33 @@
 
 (def __
   (fn [s]
-    (nil? (seq (reduce
-                 (fn [v c]
-                   (if (some #{c} #{\( \[ \{})
-                     (conj v c)
-                     (if (some #{c} #{\) \] \}})
-                       (if (= ({\) \( \} \{ \] \[} c) (peek v))
-                         (vec (butlast v))
-                         ;(reduced [:error])  ;; not allowed on 4clojure - older version of compiler
-                         (conj v :x)
-                         )
-                       v)))
-                 [] s)))))
+    (empty? (reduce
+              (fn [a e]
+                (if (and (peek a) (= (peek a) ({\) \( \] \[ \} \{} e)))
+                  (vec (butlast a))
+                  (conj a e))) [] (filter #{\( \) \[ \] \{ \}} s)))))
+
+
+; Also works but not as succinct
+;
+; (def __
+;  (fn [s]
+;    (nil? (seq (reduce
+;                 (fn [v c]
+;                   (if (some #{c} #{\( \[ \{})
+;                     (conj v c)
+;                     (if (some #{c} #{\) \] \}})
+;                       (if (= ({\) \( \} \{ \] \[} c) (peek v))
+;                         (vec (butlast v))
+;                         ;(reduced [:error])  ;; not allowed on 4clojure - older version of compiler
+;                         (conj v :x)
+;                         )
+;                       v)))
+;                 [] s)))))
 
 
 ; Also works but not efficient
+;
 ;(def __
 ;  (fn [pseq]
 ;    (->>
@@ -26,5 +38,3 @@
 ;      (drop-while (fn [[f s]] (not= f s)))
 ;      ffirst
 ;      (= ""))))
-
-
