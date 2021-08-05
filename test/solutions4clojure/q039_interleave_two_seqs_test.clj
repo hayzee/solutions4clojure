@@ -1,6 +1,6 @@
 (ns solutions4clojure.q039-interleave-two-seqs-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q039-interleave-two-seqs :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q039-interleave-two-seqs :refer :all]))
 
 (deftest answer-test
   (is (= (__ [1 2 3] [:a :b :c]) '(1 :a 2 :b 3 :c)))

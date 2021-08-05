@@ -1,6 +1,6 @@
 (ns solutions4clojure.q061-map-construction-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q061-map-construction :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q061-map-construction :refer :all]))
 
 (deftest answer-test
   (is (= (__ [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3}))

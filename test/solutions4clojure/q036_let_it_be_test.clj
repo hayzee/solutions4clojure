@@ -1,7 +1,7 @@
 (ns solutions4clojure.q036-let-it-be-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q036-let-it-be :refer :all])
-  (:require [solutions4clojure.answers :as answer]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q036-let-it-be :refer :all]
+            [solutions4clojure.answers :as answer]))
 
 (deftest answer-test
   (answer/is __ (= 10 (let __ (+ x y))))

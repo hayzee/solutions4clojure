@@ -1,6 +1,6 @@
 (ns solutions4clojure.q042-factorial-fun-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q042-factorial-fun :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q042-factorial-fun :refer :all]))
 
 (deftest answer-test
   (is (= (__ 1) 1))

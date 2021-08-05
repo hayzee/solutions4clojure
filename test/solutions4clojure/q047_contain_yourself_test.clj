@@ -1,6 +1,6 @@
 (ns solutions4clojure.q047-contain-yourself-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q047-contain-yourself :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q047-contain-yourself :refer :all]))
 
 (deftest answer-test
   (is (contains? #{4 5 6} __))

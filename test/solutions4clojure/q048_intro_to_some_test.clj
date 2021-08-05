@@ -1,6 +1,6 @@
 (ns solutions4clojure.q048-intro-to-some-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q048-intro-to-some :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q048-intro-to-some :refer :all]))
 
 (deftest answer-test
   (is (= __ (some #{2 7 6} [5 6 7 8])))

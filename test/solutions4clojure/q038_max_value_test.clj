@@ -1,6 +1,6 @@
 (ns solutions4clojure.q038_max_value-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q038_max_value :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q038_max_value :refer :all]))
 
 (deftest answer-test
   (is (= (__ 1 8 3 4) 8))

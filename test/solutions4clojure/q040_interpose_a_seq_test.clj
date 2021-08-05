@@ -1,6 +1,6 @@
 (ns solutions4clojure.q040-interpose-a-seq-test
-  (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q040-interpose-a-seq :refer :all]))
+  (:require [clojure.test :refer :all]
+            [solutions4clojure.q040-interpose-a-seq :refer :all]))
 
 (deftest answer-test
   (is (= (__ 0 [1 2 3]) [1 0 2 0 3]))
