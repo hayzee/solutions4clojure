@@ -8,7 +8,7 @@ Original questions now available at: https://4clojure.oxal.org/
 
 Download from this repo.
 
-lein test-refresh
+$ lein test-refresh
 
 ## Usage
 
