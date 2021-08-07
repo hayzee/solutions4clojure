@@ -1,30 +1,18 @@
 # solutions4clojure
 
-Solutions for 4Clojure problems
+Solutions for 4Clojure problems orininally at http://www.4clojure.com/
+
+Original questions now available at: https://4clojure.oxal.org/
 
 ## Installation
 
 Download from this repo.
 
+lein test-refresh
+
 ## Usage
 
-Just read it.
-
-## Options
-
-There are no options, only possibilities.
-
-## Examples
-
-There are no examples, only things that you might want to do.
-
-### Bugs
-
-There are no bugs, only unanswered questions.
-
-### Any Other Sections
- 
-There are no other sections, only these sections.
+Just read it, and edit answers.
 
 ## License
 
