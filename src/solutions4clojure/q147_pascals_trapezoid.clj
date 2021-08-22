@@ -9,6 +9,6 @@
 (def __
   (fn [start-line]
     (let [next-pascal
-          (defn np [r]
+          (fn np [r]
             (concat (cons (first r) (map #(apply +' %) (partition 2 1 r))) (list (last r))))]
       (iterate next-pascal start-line))))
