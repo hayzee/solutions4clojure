@@ -1,4 +1,4 @@
-(ns solutions4clojure.q0145-for-the-win)
+(ns solutions4clojure.q145-for-the-win)
 
 ; Clojure's for macro is a tremendously versatile mechanism for producing a sequence based on some other sequence(s).
 ; It can take some time to understand how to use it properly, but that investment will be paid back with clear, concise

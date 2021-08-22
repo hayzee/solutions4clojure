@@ -1,6 +1,6 @@
-(ns solutions4clojure.q0145-for-the-win-test
+(ns solutions4clojure.q145-for-the-win-test
   (:require [clojure.test :refer :all])
-  (:require [solutions4clojure.q0145-for-the-win :refer :all]))
+  (:require [solutions4clojure.q145-for-the-win :refer :all]))
 
 (deftest answer-test
   (is (= __ (for [x (range 40)
