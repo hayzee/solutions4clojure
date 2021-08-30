@@ -1,55 +1,61 @@
 (ns solutions4clojure.q124-analyze-reversi)
 
+(def __
+  (fn all-moves [board counter]
+    (let [north (fn north [[r c]] [(dec r) c])
+          no-ea (fn north [[r c]] [(dec r) c])
 
-; Broken down solution
+          toggle (fn
+                   [counter]
+                   (first (disj '#{b w} counter)))
+          vals-from (fn
+                      [board [r c] f-dir]
+                      (->>
+                        (iterate f-dir [r c])
+                        (map #(vector % (get-in board % ::notfound)))
+                        (take-while #(not= ::notfound (second %)))))
+          flipped-vals-from (fn
+                              [board [r c] f-dir counter]
+                              (let [[f s t] (partition-by #(identity (second %)) (vals-from board [r c] f-dir))]
+                                (when (and
+                                        (= (count f) 1)
+                                        (= (second (first f)) 'e)
+                                        (= (second (first s)) (toggle counter))
+                                        (= (second (first t)) counter))
+                                  s)))
+          all-flipped-vals-from (fn [board [r c] counter]
+                                  (vector [r c]
+                                    (set
+                                      (map first
+                                        (mapcat
+                                          #(flipped-vals-from board [r c] % counter)
+                                          [north no-ea east so-ea south so-we west no-we])))))
+          ]
+      (into {} (filter #(seq (second %))
+                 (map
+                   #(all-flipped-vals-from board % counter)
+                   (empties board)
+                   ))))))
 
-; Define a board
 
-(def board
-  '[[a b c d e]
-    [f g h i j]
-    [k l m n o]
-    [p q r s t]
-    [u v w x y]])
 
-; A test board
+;; Broken down solution
+
+;; Define a test board
 
 (def board '[[e e w e]
              [b b w e]
              [b w w e]
              [b w w w]])
 
-; height
-
-(defn board-height
-  "Given square board, return the height (no of rows)"
-  [board]
-  (count board))
-
-(board-height board)
-
-;width
-
-(defn board-width
-  "Given square board, return the width (no of cols)"
-  [board]
-  (count (first board)))
-
-(board-width board)
-
-(defn all-coords
-  "Given a board, return a full set of [r c] pairs for all positions on the board"
-  [board]
-  (for [r (range (count board))             ; height
-        c (range (count (first board)))]    ; width
-    [r c]))
-
-(all-coords board)
-
 (defn empties
   "Given a board, return a full set of [r c] pairs for all empty positions on the board"
   [board]
-  (filter #(= 'e (get-in board %)) (all-coords board)))
+  (->>
+    (for [row (range (count board))                                   ; height
+          col (range (count (first board)))]                          ; width
+      [row col])
+    (filter #(= 'e (get-in board %)))))
 
 (empties board)
 
@@ -93,36 +99,102 @@
   [ [[r0 c0] v0] [[r1 c1] v1] .... [[rn cn] vn] ]"
   [board [r c] f-dir]
   (->>
-    (iterate f-dir [r c])                   ; coords
-    (map #(vector % (get-in board %)))      ; augment with board values
-    (take-while second)                     ; constrain to board (assumes no board value can be nil)
-    #_(partition-by #(identity (second %)))))
+    (iterate f-dir [r c])                                             ; coords
+    (map #(vector % (get-in board % ::notfound)))                     ; augment with board values
+    (take-while #(not= ::notfound (second %)))))                      ; constrain to board (assumes no board value can be nil)
 
 (vals-from board [0 0] south)
 
 (defn toggle
-  "Tobble 'b to 'w and vice versa"
+  "Toggle counter 'b to 'w and vice versa"
   [counter]
   (first (disj '#{b w} counter)))
 
-(defn flips [board [r c] counter f-dir]
+(defn flipped-vals-from
+  "Given a board, a starting position [r c] a counter colour ('b or 'w),
+  and a direction function f-dir, return a vector of all the positions
+  from [r c] in that direction plus their corresponding value v, where
+  the position would be flipped by the move [r c] for the counter, returning
+  a vector of: [ [[r0 c0] v0] [[r1 c1] v1] .... [[rn cn] vn] ]"
+  [board [r c] f-dir counter]
   (let [[f s t] (partition-by #(identity (second %)) (vals-from board [r c] f-dir))]
-    (println :f f :s s :t t)
     (when (and
             (= (count f) 1)
             (= (second (first f)) 'e)
             (= (second (first s)) (toggle counter))
-            (= (second (first t)) counter)
-            )
+            (= (second (first t)) counter))
       s)))
 
-(defn all-flips [board [r c] counter]
-  (let [f-flipper (partial flips board [r c] counter)]
-    (map f-flipper [north no-ea east so-ea south so-we west no-we]
-    )))
+(def board '[[b w w e]
+             [w w w w]
+             [w w w w]
+             [b w w b]])
 
-(keep identity (all-flips board [0 3] 'b))
+(flipped-vals-from board [0 3] so-we 'b)
+(flipped-vals-from board [0 3] west 'b)
+(flipped-vals-from board [0 3] south 'b)
 
+(def board '[[e e e e]
+             [e w b e]
+             [e b w e]
+             [e e e e]])
+
+(flipped-vals-from board [0 1] north 'w)
+
+(defn all-flipped-vals-from [board [r c] counter]
+  (vector [r c]
+    (set
+      (map first
+        (mapcat
+          #(flipped-vals-from board [r c] % counter)
+          [north no-ea east so-ea south so-we west no-we])))))
+
+(all-flipped-vals-from board [0 1] 'w)
+
+(defn all-moves [board counter]
+  (into {} (filter #(seq (second %))
+             (map
+               #(all-flipped-vals-from board % counter)
+               (empties board)
+               ))))
+
+(all-moves '[[e e e e]
+             [e w b e]
+             [e b w e]
+             [e e e e]] 'w)
+
+(def __ all-moves)
+
+(= {[1 3] #{[1 2]}, [0 2] #{[1 2]}, [3 1] #{[2 1]}, [2 0] #{[2 1]}}
+  (__ '[[e e e e]
+        [e w b e]
+        [e b w e]
+        [e e e e]] 'w))
+
+(= {[3 2] #{[2 2]}, [3 0] #{[2 1]}, [1 0] #{[1 1]}}
+  (__ '[[e e e e]
+        [e w b e]
+        [w w w e]
+        [e e e e]] 'b))
+
+(= {[0 3] #{[1 2]}, [1 3] #{[1 2]}, [3 3] #{[2 2]}, [2 3] #{[2 2]}}
+  (__ '[[e e e e]
+        [e w b e]
+        [w w b e]
+        [e e b e]] 'w))
+
+(= {[0 3] #{[2 1] [1 2]}, [1 3] #{[1 2]}, [2 3] #{[2 1] [2 2]}}
+  (__ '[[e e w e]
+        [b b w e]
+        [b w w e]
+        [b w w w]] 'b))
+
+
+;; ====================================================================================
+;; ====================================================================================
+;; ====================================================================================
+;; ====================================================================================
+;; ====================================================================================
 
 
 
