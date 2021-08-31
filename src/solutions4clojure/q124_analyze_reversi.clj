@@ -2,18 +2,15 @@
 
 (def __
   (fn all-moves [board counter]
-    (let [north (fn north [[r c]] [(dec r) c])
-          no-ea (fn north [[r c]] [(dec r) c])
-
-          toggle (fn
-                   [counter]
-                   (first (disj '#{b w} counter)))
-          vals-from (fn
+    (let [vals-from (fn
                       [board [r c] f-dir]
                       (->>
                         (iterate f-dir [r c])
                         (map #(vector % (get-in board % ::notfound)))
                         (take-while #(not= ::notfound (second %)))))
+          toggle (fn
+                   [counter]
+                   (first (disj '#{b w} counter)))
           flipped-vals-from (fn
                               [board [r c] f-dir counter]
                               (let [[f s t] (partition-by #(identity (second %)) (vals-from board [r c] f-dir))]
@@ -23,6 +20,14 @@
                                         (= (second (first s)) (toggle counter))
                                         (= (second (first t)) counter))
                                   s)))
+          north (fn [[r c]] [(dec r) c])
+          no-ea (fn [[r c]] [(dec r) c])
+          east (fn [[r c]] [r (inc c)])
+          so-ea (fn [[r c]] [(inc r) (inc c)])
+          south (fn [[r c]] [(inc r) c])
+          so-we (fn [[r c]] [(inc r) (dec c)])
+          west (fn [[r c]] [r (dec c)])
+          no-we (fn [[r c]] [(dec r) (dec c)])
           all-flipped-vals-from (fn [board [r c] counter]
                                   (vector [r c]
                                     (set
@@ -30,14 +35,18 @@
                                         (mapcat
                                           #(flipped-vals-from board [r c] % counter)
                                           [north no-ea east so-ea south so-we west no-we])))))
+          empties (fn [board]
+                    (->>
+                      (for [row (range (count board))                 ; height
+                            col (range (count (first board)))]        ; width
+                        [row col])
+                      (filter #(= 'e (get-in board %)))))
           ]
       (into {} (filter #(seq (second %))
                  (map
                    #(all-flipped-vals-from board % counter)
                    (empties board)
                    ))))))
-
-
 
 ;; Broken down solution
 
