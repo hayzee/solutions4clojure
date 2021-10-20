@@ -12,7 +12,7 @@ $ lein test-refresh
 
 ## Usage
 
-Just read it, and edit answers.
+Just read it, and edit answers if you get excited about watching tests fail.
 
 ## License
 
